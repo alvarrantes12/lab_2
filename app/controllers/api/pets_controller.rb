@@ -38,13 +38,14 @@ class PetsController < ApplicationController
   end
 
   def destroy
+    
     @pet.destroy
-    render 'api/pets/show', status: :destroy
+    render 'api/pets/show', status: :ok
     
   end
 
   private
-  
+
     def set_pet
       @pet = Pet.find(params[:id])
     end
@@ -52,4 +53,6 @@ class PetsController < ApplicationController
     def pet_params
       params.require(:pet).permit(:name, :breed, :pedigree)
     end
+end
+
 end
