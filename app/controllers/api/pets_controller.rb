@@ -28,10 +28,10 @@ class PetsController < ApplicationController
   end
 
   def update
-    @pet = Pet.new(pet_params)
+    @pet.update(pet_params)
 
     if  @pet.save
-      render 'api/pets/show', status: :updated
+      render 'api/pets/show', status: :ok
     else
       render json: @pet.errors, status: :unprocessable_entity
     end
