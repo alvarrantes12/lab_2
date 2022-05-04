@@ -1,25 +1,19 @@
 class OwnersController < ApplicationController
   before_action :set_owner, only: %i[ show edit update destroy ]
 
-  # GET /owners or /owners.json
   def index
     @owners = Owner.all
   end
 
-  # GET /owners/1 or /owners/1.json
-  def show
-  end
+ 
+  def show; end
 
-  # GET /owners/new
   def new
     @owner = Owner.new
   end
 
-  # GET /owners/1/edit
-  def edit
-  end
+  def edit; end
 
-  # POST /owners or /owners.json
   def create
     @owner = Owner.new(owner_params)
 
@@ -34,7 +28,6 @@ class OwnersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /owners/1 or /owners/1.json
   def update
     respond_to do |format|
       if @owner.update(owner_params)
@@ -47,7 +40,6 @@ class OwnersController < ApplicationController
     end
   end
 
-  # DELETE /owners/1 or /owners/1.json
   def destroy
     @owner.destroy
 
@@ -58,12 +50,10 @@ class OwnersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_owner
       @owner = Owner.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def owner_params
       params.require(:owner).permit(:name, :last_name, :email, :identification_number)
     end
