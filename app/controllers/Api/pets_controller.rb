@@ -8,42 +8,35 @@ class Api::PetsController < ApplicationController
   end
 
 
-  def show
-  end
+  def show;end
 
   def new
     @pet = Pet.new
   end
 
   
-  def edit
-  end
+  def edit;end
 
   
   def create
     @pet = Pet.new(pet_params)
 
-    respond_to do |format|
-      if @pet.save
-        format.html { redirect_to pet_url(@pet), notice: "Pet was successfully created." }
-        format.json { render :show, status: :created, location: @pet }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @pet.errors, status: :unprocessable_entity }
-      end
+    
+
+    if @pet.save
+        render 'api/pets/show', status: :created 
+    else
+      render json: @pet.errors, status: :unprocessable_entity 
     end
+    
   end
 
  
   def update
-    respond_to do |format|
-      if @pet.update(pet_params)
-        format.html { redirect_to pet_url(@pet), notice: "Pet was successfully updated." }
-        format.json { render :show, status: :ok, location: @pet }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @pet.errors, status: :unprocessable_entity }
-      end
+    if @pet.update(pet_params)
+      render 'api/pets/show',status: :created 
+    else
+      render json: @pet.errors, status: :unprocessable_entity 
     end
   end
 
