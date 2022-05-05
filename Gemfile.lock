@@ -89,6 +89,8 @@ GEM
       reline (>= 0.2.7)
     diff-lcs (1.5.0)
     digest (3.1.0)
+    email_validator (2.2.3)
+      activemodel
     erb2haml (0.1.5)
       html2haml
     erubi (1.10.0)
@@ -150,6 +152,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (7.0.2.3)
@@ -250,12 +254,14 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  email_validator
   erb2haml
   haml
   importmap-rails
   jbuilder
   pg (~> 1.1)
   puma (~> 5.0)
+  rack-cors
   rails (~> 7.0.2, >= 7.0.2.3)
   rspec-rails
   selenium-webdriver
