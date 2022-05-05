@@ -1,6 +1,2 @@
-json.pet do
-    json.id @pet.id
-    json.id @pet.name
-    json.id @pet.breed 
-    json.id @pet.pedigree
-end
+json.extract! pet, :id, :name, :breed, :pedigree, :created_at, :updated_at
+json.url pet_url(pet, format: :json)
