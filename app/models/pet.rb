@@ -6,4 +6,6 @@ class Pet < ApplicationRecord
     validates :breed, length: {maximum: 10}
 
     validates :pedigree, presence: true
+
+    belongs_to :owner
 end

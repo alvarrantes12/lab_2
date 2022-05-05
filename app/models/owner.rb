@@ -10,4 +10,6 @@ class Owner < ApplicationRecord
     validates :last_name,  length: {maximum: 15}
     validates :personal_number,  length: {maximum: 8}
     validates :personal_number,  length: {minimum: 5}
+
+    has_many :pets
 end
