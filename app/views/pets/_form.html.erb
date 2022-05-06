@@ -1,0 +1,34 @@
+<%= form_with(model: pet) do |form| %>
+  <% if pet.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(pet.errors.count, "error") %> prohibited this pet from being saved:</h2>
+
+      <ul>
+        <% pet.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nombre, style: "display: block" %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div>
+    <%= form.label :raza, style: "display: block" %>
+    <%= form.text_field :raza %>
+  </div>
+
+  <div>
+    <%= form.label :pedigree, style: "display: block" %>
+    <%= form.check_box :pedigree %>
+  </div>
+
+
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

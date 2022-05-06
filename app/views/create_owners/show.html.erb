@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @create_owner %>
+
+<div>
+  <%= link_to "Edit this create owner", edit_create_owner_path(@create_owner) %> |
+  <%= link_to "Back to create owners", create_owners_path %>
+
+  <%= button_to "Destroy this create owner", @create_owner, method: :delete %>
+</div>

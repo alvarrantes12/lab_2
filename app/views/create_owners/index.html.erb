@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Create owners</h1>
+
+<div id="create_owners">
+  <% @create_owners.each do |create_owner| %>
+    <%= render create_owner %>
+    <p>
+      <%= link_to "Show this create owner", create_owner %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New create owner", new_create_owner_path %>
