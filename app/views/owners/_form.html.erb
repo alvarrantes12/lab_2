@@ -1,0 +1,37 @@
+<%= form_with(model: owner) do |form| %>
+  <% if owner.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(owner.errors.count, "error") %> prohibited this owner from being saved:</h2>
+
+      <ul>
+        <% owner.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nombre, style: "display: block" %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div>
+    <%= form.label :apellido, style: "display: block" %>
+    <%= form.text_field :apellido %>
+  </div>
+
+  <div>
+    <%= form.label :correoElectronico, style: "display: block" %>
+    <%= form.text_field :correoElectronico %>
+  </div>
+
+  <div>
+    <%= form.label :numeroId, style: "display: block" %>
+    <%= form.number_field :numeroId %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
