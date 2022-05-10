@@ -8,14 +8,18 @@ gem 'rails', '~> 7.0.2', '>= 7.0.2.3'
 gem 'bootsnap', require: false
 gem 'importmap-rails'
 gem 'haml'
+gem 'httparty'
 gem 'jbuilder'
+gem 'net-http'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
+gem 'rack-cors'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[ mingw mswin x64_mingw jruby ]
-gem 'rack-cors'
+
+
 
 
 group :development, :test do
