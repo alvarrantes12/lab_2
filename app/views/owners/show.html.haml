@@ -1,8 +1,8 @@
 %p{:style => "color: green"}= notice
 = render @owner
 %div
-  = link_to "Edit this owner", edit_owner_path(@owner)
+  = link_to t('application.edit', model: t('activerecord.modules.owner.one')), edit_owner_path(@owner)
   |
-  \#{link_to "Back to owners", owners_path}
+  \#{link_to t('application.back_to', model: t('activerecord.modules.owner.other')), owners_path}
   
-  \#{button_to "Destroy this owner", @owner, method: :delete}
+  \#{button_to t('application.destroy_this', model: t('activerecord.modules.owner.one')), @owner, method: :delete}

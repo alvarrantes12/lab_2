@@ -2,17 +2,21 @@ es:
   application: 
     list_of: Lista de %{model}
     new: Nuevo
+    show: Mostrar %{model}
+    edit: Editar %{model}
+    back_to: Regresar a %{model}
+    destroy_this: Destruir el %{model} 
   activerecord: 
     modules:
       owner:
-      one: Propetario
-      other: Propetarios 
-  attributes:
-    owner:
-      name: Nombre 
-      last_name: Apellido
-      personal_id: Identicacion
-      e_mail: Correo
-    pet:
-      name: Nombre
+        one: Propetario
+        other: Propetarios 
+    attributes:
+      owner:
+        name: Nombre 
+        last_name: Apellido
+        personal_id: Identicacion
+        e_mail: Correo
+      pet:
+        name: Nombre
     

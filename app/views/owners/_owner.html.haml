@@ -1,13 +1,17 @@
 %div{:id => "#{dom_id owner}"}
   %p
-    %strong Name:
+    %strong 
+      =t('activerecord.attributes.owner.name') 
     = owner.name
   %p
-    %strong Last name:
+    %strong 
+      =t('activerecord.attributes.owner.last_name')
     = owner.last_name
   %p
-    %strong E mail:
+    %strong 
+      =t('activerecord.attributes.owner.e_mail')
     = owner.e_mail
   %p
-    %strong Personal:
+    %strong 
+      =t('activerecord.attributes.owner.personal_id')
     = owner.personal_id
