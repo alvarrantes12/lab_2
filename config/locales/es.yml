@@ -1,0 +1,18 @@
+es:
+  application: 
+    list_of: Lista de %{model}
+    new: Nuevo
+  activerecord: 
+    modules:
+      owner:
+      one: Propetario
+      other: Propetarios 
+  attributes:
+    owner:
+      name: Nombre 
+      last_name: Apellido
+      personal_id: Identicacion
+      e_mail: Correo
+    pet:
+      name: Nombre
+    
