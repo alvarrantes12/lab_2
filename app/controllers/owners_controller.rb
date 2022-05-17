@@ -22,11 +22,13 @@ class OwnersController < ApplicationController
 
     respond_to do |format|
       if @owner.save
+        BreedService.new.save_breed
         format.html { redirect_to owner_url(@owner), notice: "Owner was successfully created." }
-        format.json { render :show, status: :created, location: @owner }
+        
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @owner.errors, status: :unprocessable_entity }
+        render :edit, status: :created, location: @owner
+        
+        
       end
     end
   end
@@ -34,11 +36,9 @@ class OwnersController < ApplicationController
   def update
     respond_to do |format|
       if @owner.update(owner_params)
-        format.html { redirect_to owner_url(@owner), notice: "Owner was successfully updated." }
-        format.json { render :show, status: :ok, location: @owner }
+        redirect_to owner_url(@owner), notice: "Owner was successfully updated." 
       else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @owner.errors, status: :unprocessable_entity }
+        format.html { render :new, status: :unprocessable_entity }
       end
     end
   end
