@@ -6,9 +6,9 @@ ruby '2.7.0'
 gem 'rails', '~> 7.0.2', '>= 7.0.2.3'
 
 gem 'bootsnap', require: false
-gem 'importmap-rails'
 gem 'haml'
 gem 'httparty'
+gem 'importmap-rails'
 gem 'jbuilder'
 gem 'net-http'
 gem 'pg', '~> 1.1'
